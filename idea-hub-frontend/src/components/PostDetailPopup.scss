@@ -1,0 +1,91 @@
+/* src/components/PostDetailPopup.scss */
+
+.post-detail-popup-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height: 80vh;
+  /* Ensure the popup doesn't exceed 80% of the viewport height */
+  overflow: hidden;
+  /* Hide overflow content */
+  padding-right: 16px;
+
+  section {
+    margin-bottom: 16px;
+
+    h3,
+    h4 {
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    p {
+      color: #555;
+      line-height: 1.5;
+    }
+  }
+}
+
+.post-detail-comments {
+  max-height: 200px;
+  /* Restrict the height of the comments section */
+  overflow-y: auto;
+  /* Allow vertical scrolling */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px;
+  background-color: #f9f9f9;
+
+  .comment-item {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    strong {
+      color: #1a73e8;
+      margin-bottom: 4px;
+    }
+
+    .comment-content {
+      color: #333;
+    }
+
+    .comment-timestamp {
+      font-size: 0.8rem;
+      color: #999;
+      margin-top: 4px;
+    }
+  }
+}
+
+.add-comment {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .ant-input-textarea {
+    resize: none;
+  }
+
+  button {
+    align-self: flex-end;
+  }
+}
+
+.post-detail-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+
+  button {
+    flex: 1;
+    max-width: 120px;
+    /* Adjust button width */
+  }
+}
